@@ -1,0 +1,28 @@
+{% extends 'news/layout.html' %}
+{% load static %}
+{% block title %}Новости{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'news/css/blog_list.css' %}">
+{% endblock %}
+
+{% block content %}
+    <a class="btn btn-success" href=""
+       style="margin: 1% 0 0 2%">Добавить новость</a>
+    <div class="list">
+        {% for news in news %}
+            <div class="news"
+            style="background-image: linear-gradient(90deg, white, white, transparent), url({{ news.image.url }});
+            background-position: right;">
+            <div class="content">
+                <a href="{{ news.get_absolute_url }}">{{news.title}}</a>
+            </div>
+                <div class="post_info">
+                    <a> {{ news.content | truncatechars:100 }}</a>
+                </div>
+                <a style="color: gray">by {{ news.author }}</a>
+            </div>
+        <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+<head>
+    <title>Регистрация</title>
+</head>
+<body>
+    <h2>Регистрация</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    <a href="{% url 'news:index' %}">Новости</a>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid;
+    z-index: 1;
+    height: 6%;
+    display: flex;
+    background: white;
+    padding: 0;
+}
+
+.left_side, .right_side, .middle {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.left_side {
+    width: 42%;
+    background: linear-gradient(90deg, blue, lightblue);
+}
+
+.middle {
+     width: 16%;
+    justify-content: center;
+    background: linear-gradient(90deg, lightblue, white, lightblue);
+}
+
+.right_side {
+    width: 42%;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, blue, lightblue);
+}
+
+.btn {
+    margin: 0 10px 0 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(150deg, rgba(100, 100, 201) 5%, rgba(100, 100, 156)70%, rgba(35, 50, 178) 100%);
+}
